@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: spring-eloqkv-benchmark
+  data:
+    redis:
+      host: 10.128.15.205
+      port: 6379
+      timeout: 5000ms
+      lettuce:
+        pool:
+          max-active: 50
+          max-idle: 20
+          min-idle: 5
+          max-wait: 2000ms
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+benchmark:
+  eloqkv:
+    host: 10.128.15.205
+    port: 6379

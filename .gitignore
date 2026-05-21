@@ -1,0 +1,7 @@
+target/
+gatling/target/
+results/
+*.class
+*.log
+*.out
+.DS_Store
